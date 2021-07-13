@@ -1,3 +1,4 @@
+import 'package:calculator/widgets/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/widgets/build_button.dart';
 import 'package:calculator/models/logic.dart';
@@ -14,6 +15,7 @@ class DecimalScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: KButtonColor,
       ),
+      drawer: SideDrawer(),
       body: SafeArea(
         child: Column(
           children: [
@@ -39,7 +41,7 @@ class DecimalScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    BuildButton('BM', true),
+                    BuildButton('√', true),
                     BuildButton('^', true),
                     BuildButton('+/-', true),
                     BuildButton('÷', true),

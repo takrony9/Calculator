@@ -1,5 +1,4 @@
 import 'package:calculator/models/logic.dart';
-import 'package:calculator/screens/binary_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:calculator/constants.dart';
@@ -30,20 +29,9 @@ class BuildButton extends StatelessWidget {
           ),
           onPressed: () {
             if (screen) {
-              if (input == 'BM') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BinaryScreen()),
-                );
-                return;
-              }
               Provider.of<CalculatorLogic>(context, listen: false)
                   .decimalInput(input);
             } else {
-              if (input == 'DM') {
-                Navigator.pop(context);
-                return;
-              }
               Provider.of<CalculatorLogic>(context, listen: false)
                   .binaryInput(input);
             }

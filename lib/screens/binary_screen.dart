@@ -1,3 +1,4 @@
+import '../widgets/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/widgets/build_button.dart';
 import 'package:calculator/models/logic.dart';
@@ -10,11 +11,11 @@ class BinaryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: KBackgroundColor,
       appBar: AppBar(
-        leading: Container(),
         title: Text('Calculator'),
         centerTitle: true,
         backgroundColor: KButtonColor,
       ),
+      drawer: SideDrawer(),
       body: SafeArea(
         child: Column(
           children: [
@@ -38,7 +39,7 @@ class BinaryScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    BuildButton('DM', false),
+                    BuildButton('√', false),
                     BuildButton('<<', false),
                     BuildButton('>>', false),
                     BuildButton('^', false),

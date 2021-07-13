@@ -103,6 +103,10 @@ class CalculatorLogic extends ChangeNotifier {
       temp = convert.notBites(temp);
       double result = temp.floorToDouble();
       output = result.toString();
+    } else if (input == '√') {
+      num1 = double.parse(output);
+      double temp = sqrt(num1);
+      output = temp.toString();
     } else {
       if (flag == false)
         output += input;
